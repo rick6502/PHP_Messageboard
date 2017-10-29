@@ -1,0 +1,66 @@
+drop database if exists `messageBoard`;
+
+create database `messageBoard`;
+
+use `messageBoard`;
+
+DROP TABLE IF EXISTS `logins`;
+
+CREATE TABLE `logins` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `phoneNumber` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `firstname` varchar(255) DEFAULT NULL,
+  `lastname` varchar(255) DEFAULT NULL,
+  `dob` varchar(255) DEFAULT NULL,
+  `admin` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+  
+INSERT INTO `logins` VALUES (1,'1231231234','admin123','Admin','Admin',NULL,1);
+
+
+DROP TABLE IF EXISTS `posts`;
+
+
+CREATE TABLE `posts` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(255) DEFAULT NULL,
+  `lastname` varchar(255) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `comment` text,
+  `priority` int(1) DEFAULT NULL,
+  `filename` varchar(255) DEFAULT NULL,
+  `time` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+
+
+insert into posts(firstname, lastname, title, comment, priority, filename, time)
+values('Tony', 'Hudson', 'Cras nisl ligula' ,'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac aliquet metus, id congue tortor. Pellentesque blandit ex in bibendum cursus. Phasellus dapibus augue nisl, feugiat scelerisque nisi finibus non. Curabitur hendrerit nisi nec urna sollicitudin, eu ultricies ipsum maximus. Ut ac nibh sit amet turpis malesuada dapibus eget a turpis. Sed gravida ultrices tortor at consequat. Aenean molestie tincidunt orci, dignissim luctus libero ullamcorper et. Pellentesque blandit odio vitae ultricies varius. Aenean laoreet quam lectus, eget convallis sapien dictum sed. Duis nec sodales leo, et sollicitudin arcu. Donec varius risus in ex efficitur, id interdum lorem bibendum. Pellentesque sed eros rhoncus, facilisis urna eget, lobortis nibh.', '3', 'abc.jpg', '1481808630');
+
+insert into posts(firstname, lastname, title, comment, priority, filename, time)
+values('Dave', 'Evertide', 'Lorem ipsum dolor.' ,'Duis ut commodo libero. Etiam luctus vestibulum mauris, in scelerisque erat tincidunt sed. Proin elit massa, rutrum ut lacus a, congue mattis turpis. Nunc dui lorem, lobortis sit amet ullamcorper ut, volutpat non metus. Morbi tristique ex eget interdum convallis. Proin et venenatis arcu. Phasellus vitae efficitur neque. Nam leo enim, efficitur in ipsum ut, facilisis egestas urna. In arcu lorem, eleifend vel tortor ac, eleifend fringilla leo.', '1', 'abc.jpg   ', '1481808630');
+
+insert into posts(firstname, lastname, title, comment, priority, filename, time)
+values('John', 'Doe', 'Etiam dolor ipsum' ,'Nunc malesuada sapien et tincidunt sagittis. Nunc luctus purus augue, sed efficitur enim vulputate quis. ', '1', ' abc.jpg', '1481808630');
+
+insert into posts(firstname, lastname, title, comment, priority, filename, time)
+values('Jane', 'Doe', 'Maecenas molestie ac.' ,'Suspendisse id eleifend mi. Nulla mi justo, consequat sed est a, sollicitudin mattis nibh. Suspendisse sodales aliquam lectus a ullamcorper. ', '1', null, '1481808630');
+
+insert into posts(firstname, lastname, title, comment, priority, filename, time)
+values('Doe', null, 'Proin est.' ,'Nunc dignissim erat ac aliquet condimentum. Cras nisl ligula, viverra et massa non, vulputate dapibus velit.', '1', 'abc.jpg', '1481808630');
+
+insert into posts(firstname, lastname, title, comment, priority, filename, time)
+values('Miller', null, 'ipsum' ,'Cras nec lectus risus. Etiam felis lectus, hendrerit nec est a, vehicula finibus mauris. Phasellus rutrum nibh sit amet tempor consectetur. Nullam mattis, mauris ac iaculis sagittis, felis eros finibus nibh, non feugiat mauris nibh in diam. In euismod massa quam, vel tristique nisi bibendum vel.', '1', 'abc.jpg', null);
+
+insert into posts(firstname, lastname, title, comment, priority, filename, time)
+values('Jason', 'Smithfield', 'Orci varius natoque.' ,'In commodo odio id ipsum lobortis luctus. Duis vitae metus et lacus imperdiet iaculis non ultrices erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultricies risus nec sagittis rhoncus. Mauris porta mauris quis magna placerat, ac dapibus arcu consequat. Sed sit amet turpis convallis tortor euismod luctus sit amet eu lorem. Sed at tellus ac arcu mattis molestie. Ut finibus justo et ligula porta elementum. Sed faucibus nisi quis orci cursus, congue iaculis arcu gravida. Nullam sit amet condimentum dolor, ut rhoncus nulla. Nullam eget varius augue, quis viverra felis. Donec varius dolor ut nibh mattis facilisis. Aenean pulvinar, mi ut vulputate sodales, felis ipsum blandit libero, eget tempus velit neque et tortor. Proin laoreet ipsum eu nisl aliquet pulvinar.', '1', 'abc.jpg', '1481808630');
+
+insert into posts(firstname, lastname, title, comment, priority, filename, time)
+values('Pearl', 'Marina', 'Nulla sollicitudin.' ,'Sed sit amet turpis convallis tortor euismod luctus sit amet eu lorem. Sed at tellus ac arcu mattis molestie. Ut finibus justo et ligula porta el Donec varius dolor ut nibh mattis facilisis. Aenean pulvinar, mi ut vulputate sodales, felis ipsum blandit libero, eget tempus velit neque et tortor. Proin laoreet ipsum eu nisl aliquet pulvinar.', '2', 'abc.jpg', '1481808630');
+
+insert into posts(firstname, lastname, title, comment, priority, filename, time)
+values('Jane', 'Smith', 'Simple' ,'Just a simple sentence.', '2', 'def.jpg', '1488830741');
